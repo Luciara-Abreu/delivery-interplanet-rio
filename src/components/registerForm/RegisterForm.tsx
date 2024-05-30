@@ -123,12 +123,8 @@ const RegisterForm: React.FC<RegisterProps> = ({ onSubmit, initialData = {} }) =
         </Row>
 
         <ButtonStrap>
-          <Button variant="outline-dark" type="submit">CADASTRO</Button>        
-        </ButtonStrap>
-
-
-        <ButtonStrap>
-          <Button variant="outline-dark" type="submit">Editar</Button>        
+          <Button variant="outline-dark" type="submit">CADASTRO</Button>{' '}    
+          <Button variant="outline-dark" type="submit">Editar</Button>{' '}         
         </ButtonStrap>
       </ContainerForm>
     </Form>

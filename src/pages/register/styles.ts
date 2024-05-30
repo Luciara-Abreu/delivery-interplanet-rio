@@ -15,7 +15,7 @@ height: 83.5vh;
 background: #f1ebeb;
 color: #000;
 
-p{
+H1{
   padding-top: 5%;
   font-size: 30px;
   color: #000;

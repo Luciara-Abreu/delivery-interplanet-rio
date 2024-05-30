@@ -10,8 +10,8 @@ export const Form = styled.form`
 export const ContainerForm = styled.div`
 width: 90%;
 height: 50vh;
-background: pink;
-margin-top: 15%;
+background: #cbb9bc;
+margin-top: 3%;
 padding-top: 75px;
 `
 
@@ -26,5 +26,6 @@ export const Input = styled.input`
 `;
 
 export const ButtonStrap = styled.div`
-  margin: 60px 0 20px 0;
+  width: 100%; 
+  margin: 60px 0 0 0;
 `;
