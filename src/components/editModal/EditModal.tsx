@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import InputField from '../inputField/inputFieldProps';
-import { EditModalProps, IinitialData } from '../../interface/Interface';
+import { EditModalProps } from '../../interface/Interface';
 import { ContainerForm, ButtonStrap } from './styles';
 
 
@@ -11,7 +11,7 @@ const EditModal: React.FC<EditModalProps> = ({ show, handleClose, formData, hand
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Editar Registro</Modal.Title>
+        <Modal.Title>Edite seu registro, ou Salve</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form onSubmit={handleModalSubmit}>

@@ -3,13 +3,13 @@ import Footer from "../../components/footer/Footer";
 import RegisterForm from "../../components/registerForm/RegisterForm";
 import { ContainerRegister, BodyRegister } from "./styles";
 
+
 function Register() {
    return (
     <ContainerRegister>
       <NavbarComponent />
       <BodyRegister>
         <h1>FAÇA SEU CADASTRO AGILIZE SUAS ENTREGAS.</h1>
-
         <RegisterForm onSubmit={function (data: { address: string; addressNumber: string; addressCep: string; fullName: string; phone: string; country: string; state: string; adressLine: string; }): void {
           throw new Error("Function not implemented.");
         } }/>
