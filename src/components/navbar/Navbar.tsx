@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { CustomNavbar, ContainerNavbar, ContainerTitle } from './styles';
+import ButtonNav from '../button/ButtonNav';
 
 function NavbarComponent() {
     return (
@@ -10,6 +11,7 @@ function NavbarComponent() {
                     <ContainerTitle>
                         <Navbar.Brand className='link' href="#home">DELIVERY INTERPLANETÁRIO</Navbar.Brand>
                     </ContainerTitle>
+                    <ButtonNav />
                 </Container>
             </CustomNavbar>
         </ContainerNavbar>
