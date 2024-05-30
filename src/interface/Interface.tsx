@@ -3,6 +3,11 @@ export interface RegisterProps {
   initialData?: { address: string; addressNumber: string, addressCep: string, fullName: string, phone: string, country: string, state: string, adressLine: string };
 }
 
+export interface RegisterFormProps {
+  onSubmit: (data: IinitialData) => void;
+  initialData?: IinitialData;
+}
+
 export interface  IinitialData { 
   fullName: string;
   phone: string;
@@ -22,4 +27,12 @@ export interface  IinitialData {
     required?: boolean;
     type?: string;
     colSize?: number;
+  }
+
+  export interface EditModalProps {
+    show: boolean;
+    handleClose: () => void;
+    formData: IinitialData;
+    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    handleModalSubmit: (e: React.FormEvent) => void;
   }
