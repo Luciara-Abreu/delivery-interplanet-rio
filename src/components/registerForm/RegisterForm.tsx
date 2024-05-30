@@ -17,21 +17,31 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, initialData = {} 
   const [showModal, setShowModal] = useState(false);
   const [cadastrar, setCadastrar] = useState(false);
 
+  const isFormValid = () => {
+    const requiredFields: (keyof IinitialData)[] = [
+      'fullName', 'phone', 'adressLine', 'address', 
+      'addressNumber', 'addressCep', 'country', 'state'
+    ];
+    return requiredFields.every(field => formData[field]);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    onSubmit(formData);
-
-    console.log("cadastrar", cadastrar) 
-
-    if (cadastrar ===  false) {
-      setCadastrar(true);  
-    }
+      console.log('Form Data:', formData);
+      onSubmit(formData);
+      if (cadastrar ===  false) {
+           setCadastrar(true);  
+      }
+    
   };
 
-  const handleEditClick = () => {
-    setShowModal(true);
+    const handleEditClick = () => {
+      if (isFormValid()) {
+        setShowModal(true);
+      }
+      else {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+      }
   };
 
   const handleModalSubmit = (e: React.FormEvent) => {
@@ -67,7 +77,6 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, initialData = {} 
         </ContainerForm>
       </Form>
 
-
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Editar Registro</Modal.Title>
@@ -92,8 +101,8 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, initialData = {} 
 
               <ButtonStrap>
                 <Button variant="outline-dark" type="submit">Salvar</Button>{' '}
-                <Button variant="outline-dark" type="button" onClick={() => setShowModal(false)}>Cancelar</Button>
-              </ButtonStrap>
+                 <Button variant="outline-dark" type="button" onClick={() => setShowModal(false)}>Cancelar</Button>
+               </ButtonStrap>
             </ContainerForm>
           </Form>
         </Modal.Body>

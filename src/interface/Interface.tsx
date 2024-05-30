@@ -4,14 +4,15 @@ export interface RegisterProps {
 }
 
 export interface  IinitialData { 
-  address: string; 
-  addressNumber: string, 
-  addressCep: string, 
-  fullName: string, 
-  phone: string, 
-  country: string, 
-  state: string, 
-  adressLine: string };
+  fullName: string;
+  phone: string;
+  adressLine: string;
+  address: string;
+  addressNumber: string;
+  addressCep: string;
+  country: string;
+  state: string;
+};
 
   export interface InputFieldProps {
     label: string;
