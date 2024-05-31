@@ -2,6 +2,8 @@ import NavbarComponent from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import RegisterForm from "../../components/registerForm/RegisterForm";
 import { ContainerRegister, BodyRegister } from "./styles";
+import RegisterDestin from "../../components/registerDestin/reggisterDestin";
+import { IinitialData } from "../../interface/Interface";
 
 
 function Register() {
@@ -9,10 +11,14 @@ function Register() {
     <ContainerRegister>
       <NavbarComponent />
       <BodyRegister>
-        <h1>FAÇA SEU CADASTRO AGILIZE SUAS ENTREGAS.</h1>
-        <RegisterForm onSubmit={function (data: { address: string; addressNumber: string; addressCep: string; fullName: string; phone: string; country: string; state: string; adressLine: string; }): void {
-          throw new Error("Function not implemented.");
-        } }/>
+     
+        <RegisterForm onSubmit={function (data: IinitialData): void {
+           throw new Error("Function not implemented.");
+         } } />
+
+        <RegisterDestin onSubmit={function (data: IinitialData): void {
+           throw new Error("Function not implemented.");
+         } } />
 
       </BodyRegister>
       <Footer />

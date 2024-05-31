@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import useFormState from '../../hook/useFormState';
 import { IinitialData, RegisterFormProps } from '../../interface/Interface';
 import InputField from '../inputField/inputFieldProps';
-import EditModal from '../editModal/EditModal';
+import EditModalSender from '../editModalSender/EditModalSender';
 
 
 const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, initialData = {} as IinitialData }) => {
@@ -15,7 +15,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, initialData = {} 
 
   const isFormValid = () => {
     const requiredFields: (keyof IinitialData)[] = [
-      'fullName', 'phone', 'adressLine', 'address', 
+      'fullName', 'phone', 'addressLine', 'address', 
       'addressNumber', 'addressCep', 'country', 'state'
     ];
     return requiredFields.every(field => formData[field]);
@@ -49,10 +49,11 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, initialData = {} 
     <>
       <Form onSubmit={handleSubmit}>
         <ContainerForm>
+          <h1>Remetente</h1>
           <Row>
             <InputField label="Nome *" name="fullName" value={formData.fullName} onChange={handleChange} required />
             <InputField label="Fone *" name="phone" value={formData.phone} onChange={handleChange} required />
-            <InputField label="e-mail:" name="adressLine" value={formData.adressLine} onChange={handleChange} required />
+            <InputField label="e-mail:" name="addressLine" value={formData.addressLine} onChange={handleChange} required />
           </Row>
           <Row>
             <InputField label="Rua:" name="address" value={formData.address} onChange={handleChange} required />
@@ -65,12 +66,12 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, initialData = {} 
           </Row>
 
           <ButtonStrap>
-            <Button variant="outline-dark" type="submit" onClick={handleEditClick}>CADASTRAR</Button>{' '}
+            <Button variant="outline-dark" type="submit" onClick={handleEditClick}>Cadastrar</Button>{' '}
           </ButtonStrap>
         </ContainerForm>
       </Form>
 
-      <EditModal
+      <EditModalSender
         show={showModal}
         handleClose={() => setShowModal(false)}
         formData={formData}

@@ -7,7 +7,7 @@ import { ContainerForm, ButtonStrap } from './styles';
 
 
 
-const EditModal: React.FC<EditModalProps> = ({ show, handleClose, formData, handleChange, handleModalSubmit }) => {
+const EditModalSender: React.FC<EditModalProps> = ({ show, handleClose, formData, handleChange, handleModalSubmit }) => {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
@@ -19,7 +19,7 @@ const EditModal: React.FC<EditModalProps> = ({ show, handleClose, formData, hand
             <Row>
               <InputField label="Nome *" name="fullName" value={formData.fullName} onChange={handleChange} required />
               <InputField label="Fone *" name="phone" value={formData.phone} onChange={handleChange} required />
-              <InputField label="e-mail:" name="adressLine" value={formData.adressLine} onChange={handleChange} required />
+              <InputField label="e-mail:" name="adressLine" value={formData.addressLine} onChange={handleChange} required />
             </Row>
             <Row>
               <InputField label="Rua:" name="address" value={formData.address} onChange={handleChange} required />
@@ -42,4 +42,4 @@ const EditModal: React.FC<EditModalProps> = ({ show, handleClose, formData, hand
   );
 };
 
-export default EditModal;
+export default EditModalSender;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  width: 100%;
+  width: 40%;
   display: flex;  
   flex-direction: column;
   align-items: center;

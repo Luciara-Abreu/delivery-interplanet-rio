@@ -1,7 +1,17 @@
-export interface RegisterProps {
-  onSubmit: (data: { address: string; addressNumber: string; addressCep: string; fullName: string, phone: string, country: string, state: string, adressLine: string }) => void;
-  initialData?: { address: string; addressNumber: string, addressCep: string, fullName: string, phone: string, country: string, state: string, adressLine: string };
+export interface IFormData {
+  fullName: string;
+  fullNameDestin: string;
+  phone: string;
+  addressLine: string;
+  address: string;
+  addressNumber: string;
+  addressCep: string;
+  country: string;
+  state: string;
+  marsLot: string;
+  product: string;
 }
+
 
 export interface RegisterFormProps {
   onSubmit: (data: IinitialData) => void;
@@ -10,13 +20,16 @@ export interface RegisterFormProps {
 
 export interface  IinitialData { 
   fullName: string;
+  fullNameDestin: string;
   phone: string;
-  adressLine: string;
+  addressLine: string;
   address: string;
   addressNumber: string;
   addressCep: string;
   country: string;
   state: string;
+  marsLot:string;
+  product:string;
 };
 
   export interface InputFieldProps {

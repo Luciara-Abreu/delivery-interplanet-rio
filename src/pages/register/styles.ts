@@ -17,6 +17,9 @@ background-size: auto, cover;
 `
 export const BodyRegister = styled.div`
 width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 height: 72.7vh;
 color: #000;
 
