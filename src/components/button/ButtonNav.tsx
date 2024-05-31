@@ -22,7 +22,6 @@ function ButtonNav() {
     <ComponentButton>
       <Button variant="outline-secondary" onClick={handleClickHome}>HOME</Button>{' '}
       <Button variant="outline-secondary" onClick={handleClickRegister}>CADASTRO</Button>{' '}
-      <Button variant="outline-secondary" onClick={handleClickSend}>ENVIAR PRODUTO</Button>{' '}
      </ComponentButton>
   );
 }
